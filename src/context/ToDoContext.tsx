@@ -8,8 +8,8 @@ interface Todo {
 
 type Action =
     | { type: 'ADD'; text: string }
-    | { type: 'TOGGLE'; text: string }
-    | { type: 'DELETE'; text: string }
+    | { type: 'TOGGLE'; id: string }
+    | { type: 'DELETE'; id: string }
     | { type: 'EDIT'; id: string; text: string }
     | { type: 'CLEAR_COMPLETED' }
     | { type: 'LOAD'; payload: Todo[] };
