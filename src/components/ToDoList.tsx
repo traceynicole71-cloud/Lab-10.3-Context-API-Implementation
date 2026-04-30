@@ -3,7 +3,6 @@ import { useFilter } from '../context/FilterContext';
 import { TodoItem } from './TodoItem';
 
 export const TodoList = () => {
-    
     const { todos } = useTodos();
     const { filter } = useFilter();
 
