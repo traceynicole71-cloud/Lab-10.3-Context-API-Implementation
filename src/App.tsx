@@ -1,7 +1,7 @@
 import { ThemeProvider } from './context/ThemeContext';
-import { TodoProvider } from './context/TodoContext';
-import { TodoInput } from './components/TodoInput';
-import { TodoList } from './components/TodoList';
+import { TodoProvider } from './context/ToDoContext';
+import { TodoInput } from './components/ToDoInput';
+import { TodoList } from './components/ToDoList';
 import { useTheme } from './context/ThemeContext';
 import './App.css'
 

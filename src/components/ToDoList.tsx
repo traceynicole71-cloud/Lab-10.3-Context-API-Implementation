@@ -1,6 +1,6 @@
-import { useTodos } from '../context/TodoContext';
+import { useTodos } from '../context/ToDoContext';
 import { useFilter } from '../context/FilterContext';
-import { TodoItem } from './TodoItem';
+import { ToDoItem } from './ToDoItem';
 
 export const TodoList = () => {
     const { todos } = useTodos();
@@ -16,7 +16,7 @@ export const TodoList = () => {
     return (
         <div className="spaced-y-3">
             {filteredTodos.length > 0 ? (
-                filteredTodos.map((todo: any) => <TodoItem kep={todo.id} todo={todo} />)
+                filteredTodos.map((todo: any) => <ToDoItem key={todo.id} todo={todo} />)
             ) : (
                 <p className="text-center text-gray-500 italic mt-4">No Tasks Found.</p>
             )}

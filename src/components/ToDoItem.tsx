@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useTodos } from '../context/TodoContext';
+import { useTodos } from '../context/ToDoContext';
 
 interface ToDoItemProps {
     todo: {
@@ -19,7 +19,7 @@ export const ToDoItem: React.FC<ToDoItemProps> = ({ todo }) => {
     const handleSave = () => {
         if (newText.trim()) {
             editTodo(todo.id, newText);
-            setIsEditing(false);
+            setEditing(false);
         }
     };
 
@@ -48,9 +48,9 @@ export const ToDoItem: React.FC<ToDoItemProps> = ({ todo }) => {
                     className={`flex-1 cursor-pointer transition-all ${
                     todo.completed
                     ? 'line-through text-gray-400 dark:text-gray-500'
-                    : 'text-gray-800 dark:text-gray-200,
+                    : 'text-gray-800 dark:text-gray-200'
                 }`}
-onClick={() => setIsEditing(true)}
+onClick={() => setEditing(true)}
 >
     {todo.text}
 </span>
