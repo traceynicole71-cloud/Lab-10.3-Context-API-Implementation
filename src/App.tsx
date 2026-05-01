@@ -5,9 +5,11 @@ import { TodoList } from './components/ToDoList';
 import { FilterProvider } from './context/FilterContext';
 import { FilterButtons } from './components/FilterButtons';
 import { ThemeToggleButton } from './components/ThemeToggleButton';
+import { useTodos } from './context/ToDoContext';
 import './App.css'
 
 const MainApp = () => {
+  const { todos } = useTodos();
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-200 dark:bg-gray-950 p-4 transition-colors duration-300">
@@ -25,9 +27,11 @@ const MainApp = () => {
 <FilterButtons />
 <TodoList />
 
-<p className="text-center text-gray-500 dark:text-gray-400 mt-8 italic text-sm">
-          No To Do's Yet! Please add one above.
+{todos.length === 0 && (
+          <p className="text-center text-gray-500 dark:text-gray-400 mt-8 italic text-sm">
+            No To Do's Yet! Please add one above.
           </p>
+        )}
       </div>
     </div>
   );
