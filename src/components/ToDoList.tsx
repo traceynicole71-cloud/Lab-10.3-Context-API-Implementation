@@ -14,7 +14,7 @@ export const TodoList = () => {
     });
 
     return (
-        <div className="spaced-y-3">
+        <div className="space-y-3">
             {filteredTodos.length > 0 ? (
                 filteredTodos.map((todo: any) => <ToDoItem key={todo.id} todo={todo} />)
             ) : (

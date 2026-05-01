@@ -3,7 +3,8 @@ import { TodoProvider } from './context/ToDoContext';
 import { TodoInput } from './components/ToDoInput';
 import { TodoList } from './components/ToDoList';
 import { FilterProvider } from './context/FilterContext';
-import { useTheme } from './context/ThemeContext';
+import { FilterButtons } from './components/FilterButtons';
+import { ThemeToggleButton } from './components/ThemeToggleButton';
 import './App.css'
 
 const MainApp = () => {
@@ -36,7 +37,9 @@ export default function App() {
   return (
     <ThemeProvider>
       <TodoProvider>
-        <MainApp />
+        <FilterProvider>
+          <MainApp />
+        </FilterProvider>
       </TodoProvider>
     </ThemeProvider>
   )

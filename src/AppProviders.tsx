@@ -1,5 +1,5 @@
 import React from 'react';
-import { TodoProvider } from './context/TodoContext';
+import { TodoProvider } from './context/ToDoContext';
 import { FilterProvider } from './context/FilterContext';
 import { ThemeProvider } from './context/ThemeContext';
 

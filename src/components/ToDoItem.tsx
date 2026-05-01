@@ -25,7 +25,7 @@ export const ToDoItem: React.FC<ToDoItemProps> = ({ todo }) => {
 
     return (
         <div className="flex items-center justify-between p-4 bg-gray-50 dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 rounded-md transition-colors">
-            <div className='flex items-center gap-3 flex-1'>
+            <div className="flex items-center gap-3 flex-1">
                 {/*toggle completed status*/}
                 <input
                     type="checkbox"
@@ -61,7 +61,7 @@ onClick={() => setEditing(true)}
                 {/*remove items from list*/}
                 <button
                 onClick={() => deleteTodo(todo.id)}
-                className="text-ponk-600 hover:text-pink-400 font-bold p-2 transition-colors"
+                className="text-pink-600 hover:text-pink-400 font-bold p-2 transition-colors"
                 title="Delete Task"
                 >
                     ❌
